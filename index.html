@@ -1,46 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>Ordenando una pizza</title>
+<title>Restaurante</title>
 <meta charset="utf-8" />
-<link rel="stylesheet" href="css/pizza.css" />
+<link rel="stylesheet" href="css/rest.css" />
+<link rel="stylesheet" type="text/css" href="css/formstyle2.css">
 </head>
 <body>
 <header id="box">
-<h1 id="flashlight">
-<span id="flash">ORDEN DE</span>
-<span id="light">PIZZA</span>
-</h1>
+	<h1>Restaurante </h1>
 </header>
 <form action="javascript:void(0);" class="demoForm" id="pizzaForm">
-<fieldset>
-<legend>Tamaño e ingredientes</legend>
-<p>Size:
-<label><input type="radio" name="size" value="7.50" checked="checked"
-/>Pequeña</label>
-<label><input type="radio" name="size" value="12" />Mediana</label>
-<label><input type="radio" name="size" value="16" />Gigante</label>
-<input type="hidden" name="sz_tot" value="0.00" />
-</p>
-<p id="pizza_toppings"><label>Ingredientes:</label>
-<label><input type="checkbox" name="mushrooms" value="1.25" />Hongos</label>
-<label><input type="checkbox" name="onions" value="0.75" />Cebolla</label>
-<label><input type="checkbox" name="black olives" value="0.50" />Aceitunas</label>
-<label><input type="checkbox" name="ham" value="1.50" />Jamón</label>
-<label><input type="checkbox" name="pepperoni" value="1.50" />Pepperoni</label>
-<input type="hidden" name="tops_tot" value="0.00" />
-</p>
-<p>
-<label>
-Total: $<input type="text" name="total" class="num" value="0.00"
-readonly="readonly" />
-</label>
-</p>
-<p>
-<input type="submit" name="submit" value="Submit" />
-</p>
-</fieldset>
+	<fieldset>
+		<legend>Escoga un combo</legend>
+		<p>Combos: <br><br>
+			<label><input type="radio" name="Combo1" value="7.25" checked="checked"
+			/>Super combo (tres piezas de pollo, ensalada, papas fritas y bebida grande de su elección)</label><br><br>
+			<label><input type="radio" name="Combo2" value="5.75" />Combo personal $5.75 (dos piezas de pollo, papa frita y bebida mediana)</label><br><br>
+			<label><input type="radio" name="Combo3" value="3.50" />Combo infantil</label><br><br>
+			<input type="hidden" name="sz_tot" value="0.00" />
+		</p>
+		<p id="combos_cantidad">
+			Cantidad combos:
+			<input type="number" name="cantCombo" placeholder="1" min="1" >
+			<input type="hidden" name="combo" value="0.00">
+		</p><br>
+		<p id="pizza_toppings"><label>Otros productos:</label><br><br>
+		<label><input type="checkbox" name="ensalada" value="1.50" />Ensalada</label>
+			<label><input type="checkbox" name="papafrita" value="1.25" />Papa frita</label>
+			<label><input type="checkbox" name="pollogrande" value="1.75" />Pieza de pollo grande</label>
+			<label><input type="checkbox" name="pollomediano" value="1.50" />Pieza de pollo mediana</label>
+			<label><input type="checkbox" name="pollopequeño" value="1.25" />Pieza de pollo pequeña</label>
+			<br><br>
+			<label><input type="checkbox" name="bebidag" value="1.50" />Bebida grande</label>
+			<label><input type="checkbox" name="bebidam" value="1.25" />Bebida mediana</label>
+			<label><input type="checkbox" name="bebidap" value="1.00" />Bebida pequeña</label>
+			<label><input type="checkbox" name="cafe" value="0.50" />Café</label>
+			<label><input type="checkbox" name="postre" value="1.25" />Postre</label>
+			<input type="hidden" name="tops_tot" value="0.00" />
+		</p>
+		<br>
+		<p>
+			<label>
+				Total: $<input type="text" name="total" class="num" value="0.00"
+				readonly="readonly" />
+			</label>
+		</p>
+		<br>
+		<hr>
+		<p>
+			<b>Nota:</b> Haga click o presion CTRL+E para Editar. CTRL+S para Guardar.
+			<br><br>
+			Deje sus sugerencias:
+			<div id="view"></div>
+			<textarea name="message" id="area" value="Tu mensaje" id="message" ></textarea>
+		</p>
+		<p>
+			<input src="factura.html"  type="submit" name="factura" value="Generar factura"/>
+		</p>
+	</fieldset>
 </form>
-<script src="js/pizza.js"></script>
+<script src="js/rest.js"></script>
+<script src="js/keydown.js"></script>
 </body>
 </html>
