@@ -1,3 +1,14 @@
+function funcionenviar(){
+        alert("Enviar");
+        var contenedor = document.getElementById('resultado');
+        var contenedor1 = document.getElementById('resultado1');
+        var contenedor2 = document.getElementById('resultado2');
+        var tamañobebida = document.querySelector('input[name="tipobebida"]:checked').value;
+        var tamañopollo = document.querySelector('input[name="pollosize"]:checked').value;
+        var postre = document.querySelector('input[name="postre"]:checked').value;
+        
+}
+
 //Redondeando el precio a mostrar a dos cifras decimales
 function formatDecimal(val, n) {
     n = n || 2;
@@ -19,7 +30,7 @@ function getRadioVal(form, name) {
     }
     return val;
 }
-    //Calcula el subtotal de ingredientes seleccionados
+    //Calcula el subtotal de productos seleccionados
     function getToppingsTotal(e) {
         var form = this.form;
         var val = parseFloat(form.elements['tops_tot'].value);
@@ -49,9 +60,10 @@ function updatePizzaTotal(form) {
 
     
     form.elements['total'].value = formatDecimal(sz_tot + tops_tot);
+    form.elements['resultado'] = sz_tot;
 }
 (function() {
-    var form = document.getElementById('pizzaForm');
+    var form = document.getElementById('restForm');
     var el = document.getElementById('pizza_toppings');
     // Determinar los ingredientes seleccionados en las casillas de verificación
     var tops = el.getElementsByTagName('input');
@@ -69,3 +81,5 @@ function updatePizzaTotal(form) {
     form.elements['sz_tot'].value = formatDecimal(parseFloat(getRadioVal(form, 'size')));
     updatePizzaTotal(form);
 })();
+
+

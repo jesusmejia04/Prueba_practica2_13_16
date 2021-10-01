@@ -1,92 +1,65 @@
 /* Estilos para el formulario de orden de pizza */
-body {
-    font: 16px/1.4 Tahoma,Helvetica,Kalimati,Sans-serif;
-}
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
 
-/* box ------------------------------------------------------ */
-#box {
-  background: hsl(210, 30%, 0%) radial-gradient( hsl(210, 30%, 20%), hsl(210, 30%, 0%));
-  font-weight: bold;
-  min-width: 500px;
-  padding: 20px auto;
+*{
+ 
+  font-family: 'Montserrat', sans-serif;
+}
+.title{
+  font-size: 24px;
+  font-weight: 700;
+  color: #fec107;
   text-align: center;
-  -webkit-backface-visibility: hidden; /* fixes flashing */
+    margin-top: 5%;
 }
 
-
-/* flashlight ------------------------------------------------------ */
-#flashlight {
-    color: hsla(0,0%,0%,0);
-    font-size: 3em;
-    perspective: 80px;
-    outline: none;
+form{
+  max-width: 700px;
+  width: 100%;
+  background: #fff;
+  margin: auto;
+  margin-top: 5%;
+  margin-bottom: 10%;
+  box-shadow:  0px 0px 20px #fec107;;
+  padding: 30px;
+}
+body {
+    font: 16px/1.4 ;
+    background: url(../img/fondo2.jpg);
+    background-attachment: fixed;
+    background-size:100%;
+}
+.num{
+  outline: none;
+  border: 1px solid #d5dbd9;
+  font-size: 15px;
+  padding: 8px 10px;
+  border-radius: 3px;
+  transition: all 0.3s ease;
 }
 
-
-/* flash ------------------------------------------------------ */
-#flash {
-  display: inline-block;
-  text-shadow: #bbb 0 0 1px, 
-               #fff 0 -1px 2px, 
-               #fff 0 -3px 2px, 
-               rgba(0,0,0,0.8) 0 30px 25px;
-  transition: margin-left 0.3s cubic-bezier(0, 1, 0, 1);
+.num:focus{
+      border: 1px solid #fec107;
 }
-    
-#box:hover #flash {
-  margin-left: 20px;
-  transition: margin-left 1s cubic-bezier(0, 0.75, 0, 1);
+.btn{
+    margin-left: 35%;
+  padding: 10px 20px;
+  font-size: 15px; 
+  border: 0px;
+  background:  #fec107;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 3px;
+  outline: none;
+    transition: all 0.3s ease;
 }
-
-
-/* light ------------------------------------------------------ */
-#light {
-  display: inline-block;
-  text-shadow: #111 0 0 1px, rgba(255,255,255,0.1) 0 1px 3px;
+.btn:hover{
+     background: white;
+     color:  #fec107;
 }
-
-#box:hover #light {
-  text-shadow: #fff 0 0 4px, #fcffbb 0 0 20px;
-  transform: rotateY(-60deg);
-  transition: transform 0.3s cubic-bezier(0, 0.75, 0, 1), text-shadow 0.1s ease-out;
+.total{
+    color:  red;
 }
-
-ul {
-    margin:1.4em 0 2em;
-}
-
-ul li {
-    margin-bottom:.8em;
-}
-
-form.demoForm fieldset {
-    border: 1px solid #ddd;
-    margin: 0 auto;
-    width: 60%;
-}
-
-form.demoForm p {
-    line-height: 1.1;
-    padding:0 6px;
-}
-form.demoForm legend {
-    margin-left:6px;
-}
-
-form.demoForm label {
-    margin-right: .8em;
-}
-form.demoForm input {
-    vertical-align: bottom;
-    padding:0;
-    margin:0; /* needed for checkboxes */
-}
-form.demoForm input.num {
-    text-align: right;
-    width: 50px;
-}
-
-/* for ie8+ (wraps tightly) */
-form.demoForm input[type=submit] {
-    padding:8px 22px;
+.resultado{
+  color: white;
 }

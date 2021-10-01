@@ -7,82 +7,65 @@
 <link rel="stylesheet" type="text/css" href="css/formstyle2.css">
 </head>
 <body>
-<header id="box">
+<header class="title">
 	<h1>Restaurante </h1>
 </header>
-<div id="estilo">
-<form action="javascript:void(0);" class="demoForm" id="pizzaForm">
+<form action="javascript:void(0);" class="demoForm" id="restForm">
 	<fieldset>
-		
 		<legend>Escoga un combo</legend>
-		<table>
-		<tr>
-			<th><h2>COMBOS</h2></th>
-		</tr>
-		<tr>
-		<td>Super Combo</td>
-		<td>$7.25</td>
-		<td>Tres piezas de pollo, ensalada, papas fritas y bebida grande de su elección</td>
-		</tr>
-		<tr>
-		<td>Combo personal</td>
-		<td>$5.75</td>
-		<td>dos piezas de pollo, papa frita y bebida mediana</td>
-		</tr>
-		<tr>
-		<td>Combo infantil</td>
-		<td>$3.75</td>
-		<td>1 pieza de pollo, papas fritas y una bebida pequeña</td>
-		</tr>
-		</table>
-		<br>
-		<h3>Elije tu combo</h3>
-			<label><input type="radio" name="Combo1" value="7.25" checked="checked">Super combo</label><br>
-			<label><input type="radio" name="Combo2" value="5.75">Commbo personal</label><br>
-			<label><input type="radio" name="Combo3" value="3.50">Combo infantil</label><br><br>
+		<p><b>Combos:</b> <br><br>
+			<label><input type="radio" name="size" value="7.25" checked="checked"
+			/>Super combo (tres piezas de pollo, ensalada, papas fritas y bebida grande de su elección)</label><br><br>
+			<label><input type="radio" name="size" value="5.75" />Combo personal $5.75 (dos piezas de pollo, papa frita y bebida mediana)</label><br><br>
+			<label><input type="radio" name="size" value="3.50" />Combo infantil</label><br><br>
 			<input type="hidden" name="sz_tot" value="0.00" />
 		</p>
 		<p id="combos_cantidad">
-			Cantidad combos:
+			<b>Cantidad combos:</b>
 			<input type="number" name="cantCombo" placeholder="1" min="1" >
 			<input type="hidden" name="combo" value="0.00">
 		</p><br>
-		<p id="pizza_toppings"><label>Otros productos:</label><br><br>
+		<p id="pizza_toppings"><label><b>Otros productos:</b></label><br><br>
 		<label><input type="checkbox" name="ensalada" value="1.50" />Ensalada</label>
-			<label><input type="checkbox" name="papafrita" value="1.25" />Papa frita</label>
+			<label><input type="checkbox" name="papafrita" value="1.25" />Papa frita</label><br><br><br>
+			<label>Pollo:</label><br><br>
 			<label><input type="checkbox" name="pollogrande" value="1.75" />Pieza de pollo grande</label>
 			<label><input type="checkbox" name="pollomediano" value="1.50" />Pieza de pollo mediana</label>
 			<label><input type="checkbox" name="pollopequeño" value="1.25" />Pieza de pollo pequeña</label>
-			<br><br>
+			<br><br><br>
+			<label>Bebidas:</label><br><br>
 			<label><input type="checkbox" name="bebidag" value="1.50" />Bebida grande</label>
 			<label><input type="checkbox" name="bebidam" value="1.25" />Bebida mediana</label>
 			<label><input type="checkbox" name="bebidap" value="1.00" />Bebida pequeña</label>
-			<label><input type="checkbox" name="cafe" value="0.50" />Café</label>
+			<label><input type="checkbox" name="cafe" value="0.50" />Café</label><br><br><br>
+			<label>Postre:</label><br><br>
 			<label><input type="checkbox" name="postre" value="1.25" />Postre</label>
 			<input type="hidden" name="tops_tot" value="0.00" />
 		</p>
 		<br>
 		<p>
-			<label>
-				Total: $<input type="text" name="total" class="num" value="0.00"
+			<label class="total">
+				<b>Total: $</b><input type="text" name="total" class="num" value="0.00"
 				readonly="readonly" />
 			</label>
 		</p>
 		<br>
-		<hr>
 		<p>
-			<b>Nota:</b>Presion CTRL+E para Editar. CTRL+S para Guardar.
-			<br><br>
+			<hr>
+			<b>Nota:</b> Haga click o presione CTRL+E para Editar. CTRL+S para Guardar y ESC para Cancelar.
+			<hr>
 			Deje sus sugerencias:
 			<div id="view"></div>
 			<textarea name="message" id="area" value="Tu mensaje" id="message" ></textarea>
 		</p>
 		<p>
-			<input src="factura.html"  type="submit" name="factura" value="Generar factura"/>
+			<input type="submit" name="submit" value="Generar factura" class="btn"  onclick="funcionenviar();/>
 		</p>
 	</fieldset>
+	<div id="resultado">
+		
+	</div>
 </form>
-</div>
 <script src="js/rest.js"></script>
 <script src="js/keydown.js"></script>
 </body>
