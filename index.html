@@ -10,14 +10,36 @@
 <header id="box">
 	<h1>Restaurante </h1>
 </header>
+<div id="estilo">
 <form action="javascript:void(0);" class="demoForm" id="pizzaForm">
 	<fieldset>
+		
 		<legend>Escoga un combo</legend>
-		<p>Combos: <br><br>
-			<label><input type="radio" name="Combo1" value="7.25" checked="checked"
-			/>Super combo (tres piezas de pollo, ensalada, papas fritas y bebida grande de su elección)</label><br><br>
-			<label><input type="radio" name="Combo2" value="5.75" />Combo personal $5.75 (dos piezas de pollo, papa frita y bebida mediana)</label><br><br>
-			<label><input type="radio" name="Combo3" value="3.50" />Combo infantil</label><br><br>
+		<table>
+		<tr>
+			<th><h2>COMBOS</h2></th>
+		</tr>
+		<tr>
+		<td>Super Combo</td>
+		<td>$7.25</td>
+		<td>Tres piezas de pollo, ensalada, papas fritas y bebida grande de su elección</td>
+		</tr>
+		<tr>
+		<td>Combo personal</td>
+		<td>$5.75</td>
+		<td>dos piezas de pollo, papa frita y bebida mediana</td>
+		</tr>
+		<tr>
+		<td>Combo infantil</td>
+		<td>$3.75</td>
+		<td>1 pieza de pollo, papas fritas y una bebida pequeña</td>
+		</tr>
+		</table>
+		<br>
+		<h3>Elije tu combo</h3>
+			<label><input type="radio" name="Combo1" value="7.25" checked="checked">Super combo</label><br>
+			<label><input type="radio" name="Combo2" value="5.75">Commbo personal</label><br>
+			<label><input type="radio" name="Combo3" value="3.50">Combo infantil</label><br><br>
 			<input type="hidden" name="sz_tot" value="0.00" />
 		</p>
 		<p id="combos_cantidad">
@@ -49,7 +71,7 @@
 		<br>
 		<hr>
 		<p>
-			<b>Nota:</b> Haga click o presion CTRL+E para Editar. CTRL+S para Guardar.
+			<b>Nota:</b>Presion CTRL+E para Editar. CTRL+S para Guardar.
 			<br><br>
 			Deje sus sugerencias:
 			<div id="view"></div>
@@ -60,6 +82,7 @@
 		</p>
 	</fieldset>
 </form>
+</div>
 <script src="js/rest.js"></script>
 <script src="js/keydown.js"></script>
 </body>
